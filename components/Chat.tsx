@@ -115,9 +115,3 @@ export function Chat() {
 
 
 
-// function gpt() {
-//   router.push('/gpt')
-// }
-// function dalle() {
-//   router.push('/gpt')
-// }
