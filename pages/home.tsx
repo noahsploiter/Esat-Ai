@@ -1,6 +1,5 @@
 import Link from 'next/link'
 import React from 'react'
-import fire_1f525 from '../public/fire_1f525.gif'
 
 
 function Header() {
@@ -8,14 +7,14 @@ function Header() {
         <div>
 
             <div className='flex flex-col items-center justify-center mt-6'>
-                <img src="/fire_1f525.gif" width={200} height={200} />
+                <img src="/fire_1f525.gif" width={200} height={200} alt='' />
                 <p className='text-2xl text-red-600 mt-6 mb-6'>እሳትAI</p>
             </div>
             <header className='group p-5 bg-transparent flex items-center justify-center flex-col '>
                 <div >
 
                     <Link className='px-2 py-2 bg-white text-red-500 rounded-lg hover:border hover:border-red-600 border border-red-200 hover:shadow-lg transition duration-200 ease-in-out'
-                        href="/gpt"> ChatGPT
+                        href="/ChatGpt"> ChatGPT
                     </Link>
                 </div>
                 <p className='p-2 group-hover:opacity-100 group-focus:opacity-100 opacity-0 group-active:opacity-100'> AI chatbot that answers any questions</p>

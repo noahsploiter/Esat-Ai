@@ -20,7 +20,9 @@ function OpenAIDALLEImageGenerator() {
     setIsLoading(true);
 
     const configuration = new Configuration({
-      apiKey: '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',
+      apiKey: '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',
+      //the first API key
+      //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
     });
     const openai = new OpenAIApi(configuration);
 

@@ -1,9 +1,12 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState} from "react";
 import { Button } from "./Button";
 import { type Message, ChatLine, LoadingChatLine } from "./ChatLine";
 import { useCookies } from "react-cookie";
 
 const COOKIE_NAME = "nextjs-example-ai-chat-gpt3";
+
+
+
 
 // default first message to display in UI (not necessary to define the prompt)
 export const initialMessages: Message[] = [
@@ -13,9 +16,11 @@ export const initialMessages: Message[] = [
   },
 ];
 
-const InputMessage = ({ input, setInput, sendMessage }: any) => (
+const InputMessage = ({ input, setInput, sendMessage}: any) => (
   <div className="mt-6 flex clear-both">
+    <div className=" fixed bottom-2">
     <input
+      placeholder="Type Here"
       type="text"
       aria-label="chat input"
       required
@@ -41,10 +46,15 @@ const InputMessage = ({ input, setInput, sendMessage }: any) => (
     >
       Send
     </Button>
+    </div>
   </div>
 );
 
 export function Chat() {
+
+
+  
+
   const [messages, setMessages] = useState<Message[]>(initialMessages);
   const [input, setInput] = useState("");
   const [loading, setLoading] = useState(false);
@@ -91,7 +101,7 @@ export function Chat() {
   };
 
   return (
-    <div className="rounded-2xl border-zinc-100  lg:border lg:p-6 ">
+    <div className=" rounded-2xl border-zinc-100  lg:border lg:p-6 ">
       {messages.map(({ message, who }, index) => (
         <ChatLine key={index} who={who} message={message} />
       ))}
@@ -99,7 +109,7 @@ export function Chat() {
       {loading && <LoadingChatLine />}
 
       {messages.length < 2 && (
-        <span className="mx-auto flex flex-grow text-gray-600 clear-both">
+        <span className=" mx-auto flex flex-grow text-gray-600 clear-both">
           Type a message to start the conversation
         </span>
       )}
@@ -107,6 +117,7 @@ export function Chat() {
         input={input}
         setInput={setInput}
         sendMessage={sendMessage}
+       
       />
     </div>
   );

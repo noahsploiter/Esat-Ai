@@ -11,7 +11,7 @@ export type Message = {
 
 // loading placeholder animation for the chat line
 export const LoadingChatLine = () => (
-  <div className="flex min-w-full animate-pulse px-4 py-5 sm:px-6">
+  <div className=" flex min-w-full animate-pulse px-4 py-5 sm:px-6">
     <div className="flex flex-grow space-x-3">
       <div className="min-w-0 flex-1">
         <p className="font-large text-xxl text-gray-900">
@@ -49,14 +49,14 @@ export function ChatLine({ who = "bot", message }: Message) {
   return (
     <div
       className={
-        who != "bot" ? "float-right clear-both" : "float-left clear-both "
+        who != "bot" ? "float-right clear-both " : "float-left clear-both "
       }
     >
       <BalancerWrapper>
-        <div className="float-right mb-5 rounded-lg bg-white px-4 py-5 shadow-lg ring-1 ring-zinc-100 sm:px-6">
+        <div className=" float-right mb-[70px] rounded-lg  bg-white px-4 py-3 shadow-lg ring-1 ring-zinc-100 sm:px-6">
           <div className="flex space-x-3">
-            <div className="flex-1 gap-4">
-              <p className="font-large text-xxl text-gray-900">
+            <div className="flex-1 gap-4 ">
+              <p className="pl-5 font-large text-xxl text-gray-900 ">
                 <a href="#" className="hover:underline">
                   {who == "bot" ? "እሳት AI" : "You"}
                 </a>
@@ -64,7 +64,7 @@ export function ChatLine({ who = "bot", message }: Message) {
               <p
                 className={clsx(
                   "text ",
-                  who == "bot" ? "font-semibold font- " : "text-gray-400"
+                  who == "bot" ? "font-semibold font- " : "text-gray-400 "
                 )}
               >
                 {formatteMessage}
