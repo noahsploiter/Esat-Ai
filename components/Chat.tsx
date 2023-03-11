@@ -9,7 +9,7 @@ const COOKIE_NAME = "nextjs-example-ai-chat-gpt3";
 export const initialMessages: Message[] = [
   {
     who: "bot",
-    message: "Hi! I’m A friendly AI assistant. Ask me anything!",
+    message: "Hi! I’m እሳት AI. Ask me anything!",
   },
 ];
 
@@ -111,3 +111,13 @@ export function Chat() {
     </div>
   );
 }
+
+
+
+
+// function gpt() {
+//   router.push('/gpt')
+// }
+// function dalle() {
+//   router.push('/gpt')
+// }

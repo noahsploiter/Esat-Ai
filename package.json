@@ -9,12 +9,16 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@heroicons/react": "^2.0.16",
     "@vercel/analytics": "^0.1.6",
     "@vercel/examples-ui": "^1.0.4",
+    "firebase": "^9.17.2",
     "next": "latest",
+    "openai": "^3.2.1",
     "react": "latest",
     "react-cookie": "^4.1.1",
     "react-dom": "latest",
+    "react-firebase-hooks": "^5.1.1",
     "react-wrap-balancer": "^0.1.5"
   },
   "devDependencies": {

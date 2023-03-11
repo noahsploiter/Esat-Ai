@@ -7,7 +7,7 @@ if (!process.env.OPENAI_API_KEY) {
   throw new Error('Missing Environment Variable OPENAI_API_KEY')
 }
 
-const botName = 'AI'
+const botName = 'እሳት AI'
 const userName = 'News reporter' // TODO: move to ENV var
 const firstMessge = initialMessages[0].message
 
@@ -46,7 +46,7 @@ export default async function handler(req: NextRequest) {
 
   // const messages = req.body.messages
   const messagesPrompt = generatePromptFromMessages(body.messages)
-  const defaultPrompt = `I am Friendly AI Assistant. \n\nThis is the conversation between AI Bot and a news reporter.\n\n${botName}: ${firstMessge}\n${userName}: ${messagesPrompt}\n${botName}: `
+  const defaultPrompt = `I am እሳት AI. \n\nThis is the conversation between AI Bot and a news reporter.\n\n${botName}: ${firstMessge}\n${userName}: ${messagesPrompt}\n${botName}: `
   const finalPrompt = process.env.AI_PROMPT
     ? `${process.env.AI_PROMPT}${messagesPrompt}\n${botName}: `
     : defaultPrompt
